@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'my_package'
-copyright = '2022, Author Name'
+copyright = '2026, Author Name'
 author = 'Author Name'
 
 
@@ -27,7 +27,12 @@ author = 'Author Name'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx_automodapi.automodapi'
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.viewcode',
+    'sphinx_automodapi.automodapi',  # Common in astronomy projects for auto-generating module documentation
 ]
 numpydoc_show_class_members = False
 
@@ -45,7 +50,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'furo'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
